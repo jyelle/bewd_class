@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150918012529) do
   end
 
   create_table "favequotes", force: :cascade do |t|
+    t.string   "quotation"
     t.integer  "book_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150918012529) do
   end
 
   create_table "lityears", force: :cascade do |t|
+    t.integer  "year_read"
     t.integer  "book_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -37,6 +39,7 @@ ActiveRecord::Schema.define(version: 20150918012529) do
   end
 
   create_table "notes", force: :cascade do |t|
+    t.text     "content"
     t.integer  "book_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -44,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150918012529) do
   end
 
   create_table "ratings", force: :cascade do |t|
+    t.integer  "stars"
     t.integer  "book_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
