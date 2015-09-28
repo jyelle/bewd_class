@@ -25,6 +25,13 @@ class BooksController < ApplicationController
     end		
 	end		
 
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+
+    redirect_to action: :index
+end
+
 	def show
 		@book = Book.find(params[:id])
     @lityear = @book.lityears.find_by(user_id: current_user.id)

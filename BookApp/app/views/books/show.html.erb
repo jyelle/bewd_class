@@ -1,8 +1,7 @@
-<h1>BOOKS</h1>
+<h1><%= @book.title %></h1>
 
-<p><%= @book.title %></p>
+<p><%= @book.author %></p>
 
-
-
-<%= link_to "Edit book", edit_book_path(@book) %>
-<%= link_to "Home", books_path %>
+<%= link_to "Edit Book", edit_book_path(@book) %>
+<%= link_to "Delete Book" %>
+<%= link_to "Return Home", books_path %>

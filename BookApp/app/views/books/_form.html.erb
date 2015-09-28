@@ -4,13 +4,18 @@
       <%=  f.label :title %>
       <%=  f.text_field :title %>
     </div>
+  <div>
+    <%=  f.label :author %>
+    <%=  f.text_field :author %>
+  </div>
+  <div>
     <%= f.fields_for :notes do |notes_form| %>
      
         <%= notes_form.label :content, 'What was this book about and what insights did you gain from it?' %>
         <%= notes_form.text_field :content %>
       
     <% end %>
-  
+  </div>
   <div>
     <%= f.fields_for :favequotes do |favequotes_form| %>
       
