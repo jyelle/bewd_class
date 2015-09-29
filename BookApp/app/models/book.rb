@@ -1,12 +1,9 @@
 class Book < ActiveRecord::Base
-	has_and_belongs_to_many :users
 	has_many :ratings
 	has_many :notes
 	has_many :favequotes
 	has_many :lityears
 	has_many :users, through: :lityears
-
-
 
 	accepts_nested_attributes_for :notes, :ratings, :favequotes, :lityears
 

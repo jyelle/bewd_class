@@ -35,7 +35,7 @@
     <div>
     <%= f.fields_for :ratings do |ratings_form| %>
     
-        <%= ratings_form.label :stars, "How much did you love this book?" %>
+        <%= ratings_form.label :stars, "How much did you love this book (on a scale of 1 to 5)?" %>
         <%= ratings_form.text_field :stars %>
      
     <% end %>
